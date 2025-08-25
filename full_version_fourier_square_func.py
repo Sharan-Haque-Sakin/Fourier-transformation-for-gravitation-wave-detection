@@ -28,9 +28,18 @@ def fourier_series(x,N):
 
 x = np.linspace(-np.pi , np.pi , 500)
 
-for N in [1,5,20,50]:
-    y = fourier_series(x,N)
-    plt.plot(x,y,label=f"{N} terms")    
+# for N in [1,5,20,50]:
+#     y = fourier_series(x,N)
+#     plt.plot(x,y,label=f"{N} terms")
+
+plt.plot(x , fourier_series(x,50) , color="red")
+
+# Plotting the function
+
+x_values = np.linspace(-np.pi , np.pi , 500)
+f_values = np.array([f(x_i) for x_i in x_values])
+
+plt.plot(x_values, f_values, color='black', label='f(x)')
 
 plt.title("Square wave using Fourier series")
 plt.xlabel("x values from -π to π")   
