@@ -32,7 +32,7 @@ x = np.linspace(-np.pi , np.pi , 500)
 #     y = fourier_series(x,N)
 #     plt.plot(x,y,label=f"{N} terms")
 
-plt.plot(x , fourier_series(x,50) , color="red")
+plt.plot(x,fourier_series(x,50),label="50 terms" , color="red")
 
 # Plotting the function
 
